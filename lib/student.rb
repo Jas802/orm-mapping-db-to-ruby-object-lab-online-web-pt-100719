@@ -97,7 +97,7 @@ def self.students_below_12th_grade
         ORDER BY students.id
         LIMIT ?
       SQL
-  
+
       DB[:conn].execute(sql, number).map do |row|
         self.new_from_db(row)
       end
